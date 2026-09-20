@@ -23,6 +23,17 @@ rbac:
   # Section 5 RBAC matrix placeholder; Step 12 fills this in.
   roles: [doctor, nurse, admin]
 
+# Step 1 — device simulation (Section 3 end-to-end data flow, device row).
+# We never use wall-clock time. The simulated clock starts at `start_time`
+# and advances by exponential inter-arrival times (mean seconds).
+devices:
+  per_dataset:        10
+  arrival_mean_seconds: 1.0
+  start_time:         "2026-01-01T00:00:00Z"
+  # Credential lengths; used by Step 1 only.
+  password_len:       16
+  secret_k_hex_len:   16   # 16 hex chars = 8 bytes entropy, simulation only
+
 datasets:
   - name: diabetes
     csv: diabetes_iomt_final.csv

@@ -1,0 +1,34 @@
+{
+  "seed": 42,
+  "devices_per_dataset": {
+    "diabetes": 10,
+    "cvd": 10
+  },
+  "per_dataset_assignment": {
+    "diabetes": {
+      "n_records": 100000,
+      "any_record_twice": false,
+      "n_devices_with_records": 10,
+      "devices_with_zero_records": []
+    },
+    "cvd": {
+      "n_records": 68666,
+      "any_record_twice": false,
+      "n_devices_with_records": 10,
+      "devices_with_zero_records": []
+    },
+    "every_record_assigned_once": true
+  },
+  "records_per_device_stats": {
+    "diabetes": {
+      "min": 9868,
+      "max": 10162,
+      "mean": 10000.0
+    },
+    "cvd": {
+      "min": 6699,
+      "max": 6951,
+      "mean": 6866.6
+    }
+  }
+}
