@@ -1,0 +1,21 @@
+.puku
+__pycache__/
+*.pyc
+*.pyo
+
+# Rule 10: do not commit data, artifacts or keys
+data/
+artifacts/
+keys/
+*.parquet
+*.sqlite
+*.db
+
+# Python test/coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtualenvs
+.venv/
+venv/

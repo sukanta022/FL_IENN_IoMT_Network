@@ -1,0 +1,32 @@
+# FL-IENN — single source of truth for paths and seeds.
+# All steps read this file; nothing else hard-codes paths or RNG state.
+
+seed: 42
+
+paths:
+  raw_dir:          data/raw
+  processed_dir:    data/processed
+  reports_dir:      reports
+
+splits:
+  # Section 1.7 / Frozen Decision 14: 70 / 10 / 20 stratified on gt_health.
+  train: 0.70
+  val:   0.10
+  test:  0.20
+
+stsb:
+  # Section 1.2. Consumed in Step 4; declared here so config is the single source.
+  T: 6
+  sigma_frac: 0.05
+
+rbac:
+  # Section 5 RBAC matrix placeholder; Step 12 fills this in.
+  roles: [doctor, nurse, admin]
+
+datasets:
+  - name: diabetes
+    csv: diabetes_iomt_final.csv
+    disease_col: diabetes
+  - name: cvd
+    csv: cvd_70k_iomt_final.csv
+    disease_col: cardio

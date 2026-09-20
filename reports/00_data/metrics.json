@@ -1,0 +1,143 @@
+{
+  "seed": 42,
+  "datasets": {
+    "diabetes": {
+      "rows_in": 100000,
+      "rows_out": 100000,
+      "excluded_unknown_health": 0,
+      "gender_dropped": true,
+      "gender_sex_xtab": {
+        "Female": {
+          "0": 58552,
+          "1": 0,
+          "2": 0
+        },
+        "Male": {
+          "0": 0,
+          "1": 41430,
+          "2": 0
+        },
+        "Other": {
+          "0": 0,
+          "1": 0,
+          "2": 18
+        }
+      },
+      "sensitivity_mapping_check": {
+        "rule": "gt_sensitivity == 'High'  iff  gt_health in {Moderate, Critical}",
+        "mismatches": 0,
+        "ok": true
+      },
+      "dataset": "diabetes",
+      "n_rows": 100000,
+      "split_sizes": {
+        "train": 69999,
+        "val": 10000,
+        "test": 20001
+      },
+      "split_class_distribution": {
+        "train": {
+          "Critical": 3980,
+          "Moderate": 41517,
+          "Normal": 24502
+        },
+        "val": {
+          "Critical": 569,
+          "Moderate": 5931,
+          "Normal": 3500
+        },
+        "test": {
+          "Critical": 1137,
+          "Moderate": 11863,
+          "Normal": 7001
+        }
+      },
+      "features_columns": [
+        "age",
+        "sex",
+        "smoking_history",
+        "hypertension",
+        "heart_disease",
+        "bmi",
+        "HbA1c_level",
+        "blood_glucose_level"
+      ],
+      "allowed_columns": [
+        "age",
+        "sex",
+        "smoking_history",
+        "hypertension",
+        "heart_disease",
+        "bmi",
+        "HbA1c_level",
+        "blood_glucose_level"
+      ]
+    },
+    "cvd": {
+      "rows_in": 70000,
+      "rows_out": 68666,
+      "excluded_unknown_health": 1334,
+      "health_status_before_drop": {
+        "Moderate": 42535,
+        "Critical": 18411,
+        "Normal": 7720,
+        "Unknown": 1334
+      },
+      "sensitivity_mapping_check": {
+        "rule": "gt_sensitivity == 'High'  iff  gt_health in {Moderate, Critical}",
+        "mismatches": 0,
+        "ok": true
+      },
+      "dataset": "cvd",
+      "n_rows": 68666,
+      "split_sizes": {
+        "train": 48066,
+        "val": 6866,
+        "test": 13734
+      },
+      "split_class_distribution": {
+        "train": {
+          "Critical": 12888,
+          "Moderate": 29774,
+          "Normal": 5404
+        },
+        "val": {
+          "Critical": 1841,
+          "Moderate": 4253,
+          "Normal": 772
+        },
+        "test": {
+          "Critical": 3682,
+          "Moderate": 8508,
+          "Normal": 1544
+        }
+      },
+      "features_columns": [
+        "age",
+        "sex",
+        "height",
+        "cholesterol",
+        "gluc",
+        "smoke",
+        "alco",
+        "active",
+        "weight",
+        "ap_hi",
+        "ap_lo"
+      ],
+      "allowed_columns": [
+        "age",
+        "sex",
+        "height",
+        "cholesterol",
+        "gluc",
+        "smoke",
+        "alco",
+        "active",
+        "weight",
+        "ap_hi",
+        "ap_lo"
+      ]
+    }
+  }
+}

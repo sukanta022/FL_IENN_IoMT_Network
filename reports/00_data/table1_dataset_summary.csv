@@ -1,0 +1,3 @@
+dataset,rows_in,rows_out,excluded_unknown,gender_dropped,n_features,n_rows_final,n_train,n_val,n_test
+diabetes,100000,100000,0,True,8,100000,69999,10000,20001
+cvd,70000,68666,1334,n/a,11,68666,48066,6866,13734
